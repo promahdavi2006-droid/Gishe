@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="Gishe.presentation.Domain/Gishe.presentation.Domain.csproj" Id="207ea682-16e6-43bb-b070-76de97a9fff9" />
+  <Project Path="Gishe.Presentation.Infrastructure/Gishe.Presentation.Infrastructure.csproj" Id="066f6ca3-3f9c-4755-be72-edcafefd1c96" />
   <Project Path="Gishe.Presentation/Gishe.Presentation.csproj" />
+  <Project Path="Gishe.Presention.Application/Gishe.Presention.Application.csproj" Id="3e6daab1-adfa-4148-9fee-71d0a4d93bff" />
 </Solution>
