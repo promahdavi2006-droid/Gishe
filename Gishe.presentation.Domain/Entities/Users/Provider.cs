@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Gishe.presentation.Domain.Enums;
 
-namespace Gishe.presentation.Domain.Users;
+namespace Gishe.presentation.Domain.Entities.Users;
 
 public class Provider : User
 {
