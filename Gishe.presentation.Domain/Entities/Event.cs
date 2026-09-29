@@ -1,4 +1,4 @@
-﻿namespace TicketBooking.Domain.Entities;
+﻿namespace Gishe.presentation.Domain.Entities;
 
 public class Event
 {
