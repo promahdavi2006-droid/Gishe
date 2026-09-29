@@ -1,32 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Gishe.presentation.Domain.Entities;
 
-namespace Gishe.presentation.Domain.Entities
+public class Event
 {
-    public class Session
+    public int Id { get; private set; }
+
+    public string Name { get; private set; } = string.Empty;
+
+    public decimal PricePerUnit { get; private set; }
+
+    public string Description { get; private set; } = string.Empty;
+
+    public Event(
+        string name,
+        decimal pricePerUnit,
+        string description)
     {
-        private int Id { get; set; }
+        Name = name;
+        PricePerUnit = pricePerUnit;
+        Description = description;
+    }
 
-        private DateTime StartDateTime { get; set; }
-
-        private DateTime EndDateTime { get; set; }
-
-        private int TotalCapacity { get; set; }
-
-        private int AvailableCapacity { get; set; }
-
-        private decimal Price { get; set; }
-
-        private int SoldCount { get; set; }
-
-        private SessionStatus Status { get; set; }
-
-        public void SetTimeAndDate(DateTime startDateTime, DateTime endDateTime)
-        {
-            StartDateTime = startDateTime;
-            EndDateTime = endDateTime;
-        }
+    public void Update(
+        string name,
+        decimal pricePerUnit,
+        string description)
+    {
+        Name = name;
+        PricePerUnit = pricePerUnit;
+        Description = description;
     }
 }
-
