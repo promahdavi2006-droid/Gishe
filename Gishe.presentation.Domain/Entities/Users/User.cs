@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gishe.presentation.Domain.Users;
+namespace Gishe.presentation.Domain.Entities.Users;
 
 public abstract class User : BaseEntity<Guid>
 {

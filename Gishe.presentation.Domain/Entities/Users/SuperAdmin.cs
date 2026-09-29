@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gishe.presentation.Domain.Users;
+namespace Gishe.presentation.Domain.Entities.Users;
 
 public class SuperAdmin : User
 {
