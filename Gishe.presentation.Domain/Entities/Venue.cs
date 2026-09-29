@@ -1,47 +1,82 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace TicketBooking.Domain.Entities;
 
-namespace Gishe.presentation.Domain.Entities
-{ public class Venue
-        {
-            private int Id { get; set; }
+public class Venue
+{
+    public int Id { get; private set; }
 
-            private string Name { get; set; }
+    public string Name { get; private set; } = string.Empty;
 
-            private string Address { get; set; }
+    public string Address { get; private set; } = string.Empty;
 
-            private int Capacity { get; set; }
+    public int Capacity { get; private set; }
 
-            private DateTime StartTime { get; set; }
+    public DateTime StartTime { get; private set; }
 
-            private DateTime EndTime { get; set; }
+    public DateTime EndTime { get; private set; }
 
-            private string Description { get; set; }
+    public string Description { get; private set; } = string.Empty;
 
-            private readonly List<Session> _sessions = new();
+    private readonly List<Session> _sessions = new();
 
-            public void SetCapacity(int capacity)
-            {
-                if (capacity <= 0)
-                    throw new ArgumentException("Capacity must be greater than zero.");
+    public IReadOnlyCollection<Session> Sessions =>
+        _sessions.AsReadOnly();
 
-                Capacity = capacity;
-            }
+    public Venue(
+        string name,
+        string address,
+        int capacity,
+        DateTime startTime,
+        DateTime endTime,
+        string description)
+    {
+        Name = name;
+        Address = address;
+        Description = description;
 
-            public void AddSession(Session session)
-            {
-                ArgumentNullException.ThrowIfNull(session);
+        SetCapacity(capacity);
 
-                _sessions.Add(session);
-            }
-
-            public void RemoveSession(Session session)
-            {
-                ArgumentNullException.ThrowIfNull(session);
-
-                _sessions.Remove(session);
-            }
-        }
+        StartTime = startTime;
+        EndTime = endTime;
     }
 
+    public void SetCapacity(int capacity)
+    {
+        if (capacity <= 0)
+            throw new ArgumentException(
+                "Capacity must be greater than zero.");
+
+        Capacity = capacity;
+    }
+
+    public void AddSession(Session session)
+    {
+        ArgumentNullException.ThrowIfNull(session);
+
+        _sessions.Add(session);
+    }
+
+    public void RemoveSession(Session session)
+    {
+        ArgumentNullException.ThrowIfNull(session);
+
+        _sessions.Remove(session);
+    }
+
+    public void Update(
+        string name,
+        string address,
+        int capacity,
+        DateTime startTime,
+        DateTime endTime,
+        string description)
+    {
+        Name = name;
+        Address = address;
+        Description = description;
+
+        SetCapacity(capacity);
+
+        StartTime = startTime;
+        EndTime = endTime;
+    }
+}
