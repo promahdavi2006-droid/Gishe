@@ -29,6 +29,14 @@ public class Venue
         DateTime endTime,
         string description)
     {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException(
+                "Name cannot be empty.");
+
+        if (string.IsNullOrWhiteSpace(address))
+            throw new ArgumentException(
+                "Address cannot be empty.");
+
         Name = name;
         Address = address;
         Description = description;
@@ -52,7 +60,8 @@ public class Venue
     {
         ArgumentNullException.ThrowIfNull(session);
 
-        _sessions.Add(session);
+        if (!_sessions.Contains(session))
+            _sessions.Add(session);
     }
 
     public void RemoveSession(Session session)
@@ -70,6 +79,14 @@ public class Venue
         DateTime endTime,
         string description)
     {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException(
+                "Name cannot be empty.");
+
+        if (string.IsNullOrWhiteSpace(address))
+            throw new ArgumentException(
+                "Address cannot be empty.");
+
         Name = name;
         Address = address;
         Description = description;

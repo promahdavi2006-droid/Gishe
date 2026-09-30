@@ -15,6 +15,14 @@ public class Event
         decimal pricePerUnit,
         string description)
     {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException(
+                "Name cannot be empty.");
+
+        if (pricePerUnit < 0)
+            throw new ArgumentException(
+                "Price cannot be negative.");
+
         Name = name;
         PricePerUnit = pricePerUnit;
         Description = description;
@@ -25,6 +33,14 @@ public class Event
         decimal pricePerUnit,
         string description)
     {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException(
+                "Name cannot be empty.");
+
+        if (pricePerUnit < 0)
+            throw new ArgumentException(
+                "Price cannot be negative.");
+
         Name = name;
         PricePerUnit = pricePerUnit;
         Description = description;
