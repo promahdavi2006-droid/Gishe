@@ -1,4 +1,8 @@
-﻿namespace Gishe.presentation.Domain.Base
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Gishe.presentation.Domain.Base
 {
     public abstract class BaseEntity<TKey> : IBaseEntity<TKey>
     {
