@@ -1,4 +1,4 @@
-﻿namespace Gishe.Presention.Application.DTOs.Users;
+﻿namespace Gishe.Presentation.Application.DTOs.Users;
 
 public class ConsumerDto
 {

@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gishe.presentation.Domain\Gishe.presentation.Domain.csproj" />
-    <ProjectReference Include="..\Gishe.Presention.Application\Gishe.Presention.Application.csproj" />
+    <ProjectReference Include="..\Gishe.Presention.Application\Gishe.Presentation.Application.csproj" />
   </ItemGroup>
 
 </Project>

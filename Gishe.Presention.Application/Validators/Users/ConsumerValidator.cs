@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Gishe.presentation.Domain.Entities.Users;
 
-namespace Gishe.Presention.Application.Validators.Users;
+namespace Gishe.Presentation.Application.Validators.Users;
 
 public class ConsumerValidator : AbstractValidator<Consumer>
 {

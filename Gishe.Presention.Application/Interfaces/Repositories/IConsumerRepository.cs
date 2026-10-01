@@ -1,7 +1,6 @@
 ﻿using Gishe.presentation.Domain.Entities.Users;
 
-
-namespace Gishe.Presention.Application.Interfaces.Repositories;
+namespace Gishe.Presentation.Application.Interfaces.Repositories;
 
 public interface IConsumerRepository
 {

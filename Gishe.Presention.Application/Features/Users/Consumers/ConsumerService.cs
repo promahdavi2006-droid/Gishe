@@ -1,10 +1,9 @@
-﻿
-using Gishe.presentation.Domain.Entities.Users;
+﻿using Gishe.presentation.Domain.Entities.Users;
+using Gishe.Presentation.Application.Interfaces.Repositories;
 using Gishe.Presention.Application.DTOs.Users;
-using Gishe.Presention.Application.Interfaces.Repositories;
 using Gishe.Presention.Application.Interfaces.Services;
 
-namespace Gishe.Presention.Application.Features.Users.Consumers;
+namespace Gishe.Presentation.Application.Features.Users.Consumers;
 
 public class ConsumerService : IConsumerService
 {
