@@ -1,6 +1,11 @@
-﻿namespace Gishe.presentation.Domain.Base;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-public interface IBaseEntity<TKey>
+namespace Gishe.presentation.Domain.Base
 {
-    public TKey Id { get; }
+    public interface IBaseEntity<TKey>
+    {
+        public TKey Id { get; }
+    }
 }

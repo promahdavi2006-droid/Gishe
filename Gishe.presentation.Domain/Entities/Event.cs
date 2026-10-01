@@ -1,32 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Gishe.presentation.Domain.Entities;
 
-namespace Gishe.presentation.Domain.Entities
+public class Event
 {
-    public class Session
+    public int Id { get; private set; }
+
+    public string Name { get; private set; } = string.Empty;
+
+    public decimal PricePerUnit { get; private set; }
+
+    public string Description { get; private set; } = string.Empty;
+
+    public Event(
+        string name,
+        decimal pricePerUnit,
+        string description)
     {
-        private int Id { get; set; }
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException(
+                "Name cannot be empty.");
 
-        private DateTime StartDateTime { get; set; }
+        if (pricePerUnit < 0)
+            throw new ArgumentException(
+                "Price cannot be negative.");
 
-        private DateTime EndDateTime { get; set; }
+        Name = name;
+        PricePerUnit = pricePerUnit;
+        Description = description;
+    }
 
-        private int TotalCapacity { get; set; }
+    public void Update(
+        string name,
+        decimal pricePerUnit,
+        string description)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException(
+                "Name cannot be empty.");
 
-        private int AvailableCapacity { get; set; }
+        if (pricePerUnit < 0)
+            throw new ArgumentException(
+                "Price cannot be negative.");
 
-        private decimal Price { get; set; }
-
-        private int SoldCount { get; set; }
-
-        private SessionStatus Status { get; set; }
-
-        public void SetTimeAndDate(DateTime startDateTime, DateTime endDateTime)
-        {
-            StartDateTime = startDateTime;
-            EndDateTime = endDateTime;
-        }
+        Name = name;
+        PricePerUnit = pricePerUnit;
+        Description = description;
     }
 }
-
